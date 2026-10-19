@@ -1,0 +1,467 @@
+/* =================================
+   LILAC DREAM — RISMA ISNAENI
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --lilac: #c8a2e8;
+  --purple: #9b72cf;
+  --dark-purple: #68418c;
+  --light-purple: #f4eaff;
+  --white: #ffffff;
+  --text: #57436b;
+  --shadow: 0 10px 35px rgba(117, 76, 158, 0.13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  line-height: 1.8;
+  background:
+    radial-gradient(circle at 10% 10%, #f9e7ff, transparent 35%),
+    radial-gradient(circle at 90% 50%, #e5d4ff, transparent 35%),
+    linear-gradient(135deg, #fffaff, #f0e5ff);
+  background-attachment: fixed;
+}
+
+/* ===== HEADER / HERO ===== */
+
+header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 75px 20px 65px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #d7b8f5,
+    #b38add,
+    #8960bc
+  );
+  border-radius: 0 0 60px 60px;
+  box-shadow: 0 12px 35px rgba(126, 78, 171, 0.22);
+}
+
+/* Hiasan lingkaran */
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+header::before {
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: -70px;
+}
+
+header::after {
+  width: 200px;
+  height: 200px;
+  bottom: -90px;
+  right: -35px;
+}
+
+header img {
+  position: relative;
+  z-index: 1;
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  outline: 3px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 7px;
+  box-shadow: 0 10px 30px rgba(58, 30, 88, 0.25);
+  margin-bottom: 25px;
+  animation: float 4s ease-in-out infinite;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 15px rgba(66, 36, 91, 0.15);
+}
+
+header p {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 7px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(10px);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  width: 92%;
+  max-width: 1050px;
+  margin: 25px auto 40px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--dark-purple);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+  background: linear-gradient(135deg, #c8a2e8, #9163c2);
+  box-shadow: 0 5px 15px rgba(145, 99, 194, 0.25);
+  transform: translateY(-3px);
+}
+
+/* ===== MAIN CONTENT ===== */
+
+main {
+  width: 90%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 35px;
+  border: 1px solid rgba(210, 185, 237, 0.65);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(117, 76, 158, 0.17);
+}
+
+section h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--dark-purple);
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+section h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background: linear-gradient(#d8b7f5, #9163c2);
+}
+
+section p {
+  color: #6e5b7e;
+  font-size: 0.96rem;
+  text-align: justify;
+}
+
+/* ===== EDUCATION ===== */
+
+#pendidikan ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+#pendidikan li {
+  position: relative;
+  margin: 0 0 20px 8px;
+  padding: 20px 22px;
+  border-left: 3px solid #b994e4;
+  border-radius: 0 18px 18px 0;
+  background: linear-gradient(90deg, #f4eaff, #fffaff);
+  transition: all 0.3s ease;
+}
+
+#pendidikan li:hover {
+  border-left-color: #8053b1;
+  transform: translateX(6px);
+}
+
+#pendidikan li:last-child {
+  margin-bottom: 0;
+}
+
+section h3 {
+  color: #704b94;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+#pendidikan li p,
+#organisasi li p {
+  margin-top: 5px;
+  color: #9a7bb3;
+  font-size: 0.88rem;
+}
+
+/* ===== SKILLS ===== */
+
+#keahlian ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  padding: 0;
+  list-style: none;
+}
+
+#keahlian li {
+  padding: 10px 20px;
+  border: 1px solid #e2cef8;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f4eaff, #fff);
+  color: #79539c;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#keahlian li::before {
+  content: "✿ ";
+  color: #aa7bd7;
+}
+
+#keahlian li:hover {
+  color: white;
+  background: linear-gradient(135deg, #c8a2e8, #9163c2);
+  transform: translateY(-4px);
+}
+
+/* ===== ORGANIZATION ===== */
+
+#organisasi ul {
+  list-style: none;
+}
+
+#organisasi li {
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f4eaff, #fffaff);
+  border: 1px solid #eadcf8;
+}
+
+/* ===== SOCIAL MEDIA ===== */
+
+#sosmed {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(243, 229, 255, 0.95)
+  );
+}
+
+#sosmed h2 {
+  justify-content: center;
+}
+
+#sosmed h2::before {
+  display: none;
+}
+
+#sosmed ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+#sosmed li {
+  margin: 0;
+}
+
+#sosmed a {
+  display: inline-block;
+  min-width: 150px;
+  padding: 12px 25px;
+  border: 1px solid #c9a7e9;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #c8a2e8, #9365c4);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 7px 18px rgba(147, 101, 196, 0.2);
+  transition: all 0.3s ease;
+}
+
+#sosmed a:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: linear-gradient(135deg, #a77bd3, #7546a6);
+  box-shadow: 0 12px 24px rgba(117, 70, 166, 0.3);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  margin-top: 55px;
+  padding: 28px 20px;
+  border-radius: 35px 35px 0 0;
+  background: linear-gradient(135deg, #c8a2e8, #8960bc);
+  color: white;
+  text-align: center;
+  box-shadow: 0 -5px 25px rgba(117, 76, 158, 0.12);
+}
+
+footer p {
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+
+@media (max-width: 600px) {
+  header {
+    padding: 55px 18px 45px;
+    border-radius: 0 0 38px 38px;
+  }
+
+  header img {
+    width: 140px;
+    height: 140px;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    position: relative;
+    top: auto;
+    width: 92%;
+    margin: 20px auto 30px;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  main {
+    width: 92%;
+  }
+
+  section {
+    padding: 23px 20px;
+    margin-bottom: 22px;
+    border-radius: 22px;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  #pendidikan li {
+    padding: 16px;
+  }
+
+  #keahlian {
+    padding-bottom: 25px;
+  }
+
+  #sosmed a {
+    min-width: 125px;
+    padding: 10px 18px;
+  }
+
+  footer {
+    margin-top: 35px;
+  }
+}
+
+/* ===== REDUCE ANIMATION IF REQUESTED ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
